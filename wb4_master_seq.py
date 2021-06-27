@@ -33,7 +33,7 @@
 # File name     : wb4_master_seq.py
 # Author        : Jose R Garcia
 # Created       : 2020/11/22 10:24:13
-# Last modified : 2021/06/24 23:38:38
+# Last modified : 2021/06/26 23:52:32
 # Project Name  : UVM Python Verification Library
 # Module Name   : wb4_master_seq, wb4_master_base_sequence
 # Description   : Wishbone Bus Sequence Item and Sequences.
@@ -104,9 +104,9 @@ class wb4_master_seq(UVMSequenceItem):
             self.acknowledge    == rhs.acknowledge and
             self.transmit_delay == rhs.transmit_delay):
             # match
-            return 1
+            return True
         else:
-            return 0
+            return False
 
 
     def convert2string(self): 
